@@ -105,6 +105,8 @@ public class APIController {
         return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
     }
 
+
+
     @DeleteMapping("/users/{id}/cart/remove/{productId}")
     public ResponseEntity<User> removeFromUserCart (@PathVariable("id") Long id,
                                                     @PathVariable("productId") Long productId) {
