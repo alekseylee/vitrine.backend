@@ -24,8 +24,8 @@ public class ProductService {
                 new ProductNotFoundException("Product by id " + id + " was not found."));
     }
 
-    public Product addProduct (Product product) {
-        return repo.save(product);
+    public List <Product> addProduct (List<Product> products) {
+        return repo.saveAll(products);
     }
 
     public Product updateProduct (Long id, Product product) {

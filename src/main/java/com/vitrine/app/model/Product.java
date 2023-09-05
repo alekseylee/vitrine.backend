@@ -28,7 +28,7 @@ public class Product {
     @Lob
     @Column(nullable = true, length = Integer.MAX_VALUE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private byte[] image;
+    private String image;
 
     public Product () {
     }
@@ -39,7 +39,7 @@ public class Product {
         this.price = price;
     }
 
-    public Product (String name, String description, double price, byte[]image) {
+    public Product (String name, String description, double price, String image) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -86,11 +86,11 @@ public class Product {
         this.addedOn = addedOn;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 }

@@ -5,6 +5,7 @@ import com.vitrine.app.model.Product;
 import com.vitrine.app.model.User;
 import com.vitrine.app.model.cart.CartItem;
 import com.vitrine.app.model.cart.CartItemPK;
+import com.vitrine.app.repo.ProductRepository;
 import com.vitrine.app.service.CartItemService;
 import com.vitrine.app.service.JwtUserDetailsService;
 import com.vitrine.app.service.ProductService;
@@ -16,6 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -127,14 +129,16 @@ public class APIController {
         return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
     }
 
+
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProduct (@PathVariable("id") Long id) {
         return new ResponseEntity<>(productService.getProduct(id), HttpStatus.OK);
     }
 
     @PostMapping("/products")
-    public ResponseEntity<Product> addProduct (@RequestBody Product product) {
-        return new ResponseEntity<>(productService.addProduct(product), HttpStatus.OK);
+    public ResponseEntity<List<Product>> addProduct (@RequestBody List<Product> products) {
+        List<Product> addedProducts = productService.addProduct(products);
+        return ResponseEntity.ok(addedProducts);
     }
 
     @PutMapping("/products/{id}")
