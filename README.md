@@ -53,7 +53,7 @@ Run the Angular development server: ###ng serve or ###ng s --o.
 #### Project Structure:
 
   <div align="center">
-      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/account-edit-page.jpg?raw=true" width="auto" height="auto" />
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/project UML.png?raw=true" width="auto" height="auto" />
       <p>Account Edit Page</p>
     </div>
 
