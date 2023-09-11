@@ -52,7 +52,7 @@ Run the Angular development server: ###ng serve or ###ng s --o.
 
 #### Project Structure:
 
-  <div align="center">
+ <div align="center">
       <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/project UML.png?raw=true" width="auto" height="auto" />
       <p>UML of project</p>
     </div>
