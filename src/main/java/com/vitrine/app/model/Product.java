@@ -1,6 +1,7 @@
 package com.vitrine.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -29,6 +30,9 @@ public class Product {
     @Column(nullable = true, length = Integer.MAX_VALUE)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String image;
+
+    @ManyToOne
+    private User user;
 
     public Product () {
     }
