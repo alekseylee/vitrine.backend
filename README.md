@@ -12,7 +12,7 @@ Backend: Spring Boot
 
 Frontend: Angular
 
-Database: MySQL (You can choose other databases as well)
+Database: mySQL (You can choose other databases as well)
 
 Authentication: JSON Web Tokens (JWT)
 
@@ -44,13 +44,11 @@ Run the Spring Boot application using your preferred IDE or the command line: ./
 
 Clone the repository and navigate to the frontend directory:https://github.com/alekseylee/vitrine.frontend.
 
-#### Install the required packages:
+Install the required packages: npm install.
 
-You should install node_modules "**npm install**" in the terminal.
+Configure the API endpoint in the environment.ts file.
 
-Configure the API endpoint in the **environment.ts** file.
-
-Run the Angular development server: **ng serve** or **ng s --o**.
+Run the Angular development server: ###ng serve or ###ng s --o.
 
 #### Project Structure:
 
@@ -58,11 +56,34 @@ backend: Contains the Spring Boot backend code.
 
 frontend: Contains the Angular frontend code.
 
-blablabla???
-?
-?
-?
-?
+#### Project Mockup:
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/home-page.jpg?raw=true" width="auto" height="auto" />
+      <p>Home Page</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/login-page.jpg?raw=true" width="auto" height="auto" />
+      <p>Login Page</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/signup-page.jpg?raw=true" width="auto" height="auto" />
+      <p>Signup Page</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/account-page.jpg?raw=true" width="auto" height="auto" />
+      <p>Account Page</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/account-edit-page.jpg?raw=true" width="auto" height="auto" />
+      <p>Account Edit Page</p>
+    </td>
+  </tr>
+</table>
+
 
 #### Contributions
 
