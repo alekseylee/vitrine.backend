@@ -54,7 +54,7 @@ Run the Angular development server: ###ng serve or ###ng s --o.
 
   <div align="center">
       <img src="https://github.com/alekseylee/vitrine.frontend/blob/main/src/assets/static/mockup/project UML.png?raw=true" width="auto" height="auto" />
-      <p>Account Edit Page</p>
+      <p>UML of project</p>
     </div>
 
 backend: Contains the Spring Boot backend code.
