@@ -36,6 +36,7 @@ public class User {
     @OneToMany(mappedBy = "pk.user", cascade = CascadeType.ALL)
     private List<CartItem> cartItems = new ArrayList<>();
 
+
     public User () {
     }
 

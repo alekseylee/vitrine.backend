@@ -62,6 +62,7 @@ public class APIController {
         return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
     }
 
+
     @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser (@PathVariable("id") Long id, @RequestBody Map<String, Object> user) {
         User newUser = new User(
