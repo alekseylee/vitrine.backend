@@ -15,20 +15,20 @@ public class ProductService {
         this.repo = repo;
     }
 
-    public List<Product> getProducts () {
+    public List<Product> getProducts() {
         return repo.findAll();
     }
 
-    public Product getProduct (Long id) {
+    public Product getProduct(Long id) {
         return repo.findById(id).orElseThrow(() ->
                 new ProductNotFoundException("Product by id " + id + " was not found."));
     }
 
-    public List <Product> addProduct (List<Product> products) {
+    public List<Product> addProduct(List<Product> products) {
         return repo.saveAll(products);
     }
 
-    public Product updateProduct (Long id, Product product) {
+    public Product updateProduct(Long id, Product product) {
         Product oldProduct = getProduct(id);
 
         oldProduct.setName(product.getName());
@@ -39,7 +39,12 @@ public class ProductService {
         return repo.save(oldProduct);
     }
 
-    public void deleteProduct (Long id) {
+    public void deleteProduct(Long id) {
         repo.deleteById(id);
+    }
+
+    public List<Product> searchItems(String query) {
+        List<Product> searchResults = repo.findByItemNameContainingIgnoreCase(query);
+        return searchResults;
     }
 }

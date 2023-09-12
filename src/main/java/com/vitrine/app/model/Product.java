@@ -27,9 +27,12 @@ public class Product {
     private Date addedOn = new Date();
 
     @Lob
-    @Column(nullable = true, length = Integer.MAX_VALUE)
+    @Column(nullable = true)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String image;
+
+    @Column(nullable = true)
+    private String size;
 
     @ManyToOne
     private User user;
@@ -37,17 +40,19 @@ public class Product {
     public Product () {
     }
 
-    public Product (String name, String description, double price) {
+    public Product (String name, String description, double price, String size) {
         this.name = name;
         this.description = description;
         this.price = price;
+        this.size = size;
     }
 
-    public Product (String name, String description, double price, String image) {
+    public Product (String name, String description, double price, String size, String image) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.image = image;
+        this.size = size;
     }
 
     public long getId() {
@@ -96,5 +101,13 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 }

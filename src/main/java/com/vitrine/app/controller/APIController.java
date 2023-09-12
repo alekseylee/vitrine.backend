@@ -165,4 +165,10 @@ public class APIController {
                                                  @PathVariable("productId") Long productId) {
         return ResponseEntity.ok(cartItemService.getCartItem(id, productId));
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Product>> searchItems(@RequestParam("query") String query) {
+        List<Product> searchResults = productService.searchItems(query);
+        return ResponseEntity.ok(searchResults);
+    }
 }
